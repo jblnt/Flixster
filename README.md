@@ -1,7 +1,38 @@
 # Flix
 Flix is an app that allows users to browse movies from the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
-📝 `NOTE - PASTE PART 2 SNIPPET HERE:` Paste the README template for part 2 of this assignment here at the top. This will show a history of your development process, which users stories you completed and how your app looked and functioned at each step.
+## Flix Part 2
+
+### User Stories
+
+#### REQUIRED (10pts)
+
+- [x] (8pts) Expose details of movie (ratings using RatingBar, popularity, and synopsis) in a separate activity.
+- [x] (2pts) Allow video posts to be played in full-screen using the YouTubePlayerView.
+
+#### BONUS
+
+- [x] Implement a shared element transition when user clicks into the details of a movie (1 point).
+- [ ] Trailers for popular movies are played automatically when the movie is selected (1 point).
+  - [ ] When clicking on a popular movie (i.e. a movie voted for more than 5 stars) the video should be played immediately.
+  - [ ] Less popular videos rely on the detailed page should show an image preview that can initiate playing a YouTube video.
+- [ ] Add a play icon overlay to popular movies to indicate that the movie can be played (1 point).
+- [ ] Apply data binding for views to help remove boilerplate code. (1 point)
+- [x] Add a rounded corners for the images using the Glide transformations. (1 point)
+
+### App Walkthough GIF
+
+<img src="Peek-2021-09-27-21-09.gif" width=250><br>
+
+### Notes
+Adding the rounded corners for the posters initally caused strange shifting and ruined the intended layout of the application's main screen. After reading the Glide documentation and trying various methods of troubleshooting, the problem was solved by adding using the fitCenter() method before applying the transformation. 
+
+Implementing Shared Element transition for multiple shared elements was unsuccessful. Trying to pass multiple Pairs of Views and Strings caused compliation errors. In the documentation it was stated that we needed to import the android.support.v4.util.Pair class but I tried multiple ways and times but was unable too. In the end I added a Shared Element Transition to the movie Overiew only.
+
+## Open-source libraries used
+- [Android Async HTTP](https://github.com/codepath/CPAsyncHttpClient) - Simple asynchronous HTTP requests with JSON parsing
+- [Glide](https://github.com/bumptech/glide) - Image loading and caching library for Android
+- [Peek](https://github.com/phw/peek) - Tool used for creating GIFs. 
 
 ---
 
